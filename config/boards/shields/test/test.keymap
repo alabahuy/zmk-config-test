@@ -13,6 +13,8 @@
                 &kp N    &kp M    &kp COMMA &kp DOT &kp SLASH
                 &kp RALT &kp RET  &kp BSPC
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };

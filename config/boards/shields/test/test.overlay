@@ -42,3 +42,21 @@
             ;
     };
 };
+
+/ {
+    // 1. Mendefinisikan hardware encoder
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 1.06
+        b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.09
+        steps = <80>;
+        status = "okay";
+    };
+
+    // 2. Mendaftarkan encoder sebagai sensor ke keymap
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
+    };
+};

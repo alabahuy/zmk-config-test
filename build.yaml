@@ -23,5 +23,3 @@ include:
     shield: test
   - board: nice_nano_v2
     shield: settings_reset
-  - board: nice_nano_v2
-    shield: tester_pro_micro  
